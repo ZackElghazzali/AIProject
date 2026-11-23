@@ -1,0 +1,32 @@
+# Python 3.12. Not optional and not a suggestion: mediapipe publishes wheels
+# for 3.9-3.12 only, so `pip install -r requirements.txt` fails outright on
+# 3.13 or newer with a "no matching distribution" error that does not mention
+# your Python version. Colab is on a supported version; if you are working
+# locally, check with `python -VV` before anything else.
+#
+# Pinned. The grade of record is produced under exactly these versions.
+#
+# Heavier than the solo assignments: torch alone is most of a gigabyte. Install
+# into a fresh virtual environment, or work in Colab, where torch is already
+# present and only the two detector libraries need adding.
+numpy==2.4.4
+pillow==12.1.1
+matplotlib==3.10.8
+opencv-python-headless==4.13.0.92
+torch==2.13.0
+ultralytics==8.4.96
+mediapipe==0.10.33
+# These two look out of place in a project with no notebook. They are not
+# vestigial: grader_core.py is byte-identical across every assignment in the
+# course and imports both at module level for its notebook executor, so the
+# grader will not import without them. Do not remove.
+nbclient==0.11.0
+nbformat==5.10.4
+
+# Weights ship in provided/models/ and are loaded by path. Nothing in this
+# package downloads a model, so grading does not depend on the network and the
+# weights cannot change under you mid-semester.
+#
+# ultralytics is AGPL-3.0 and reports usage by default. The setup step in
+# README.md turns that off. Read the memo prompt before deciding how you feel
+# about having found that out from a requirements file.

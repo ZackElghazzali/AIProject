@@ -1,0 +1,134 @@
+{
+  "assignment_id": "TP",
+  "assignment_title": "The Detector, and What It Misses",
+  "notebook": "FaceDetect",
+  "entry": "repo",
+  "run_all_ok": true,
+  "run_all_msg": "package imported cleanly in a fresh interpreter",
+  "first_error_cell": null,
+  "base_earned": 100.0,
+  "base_total": 100.0,
+  "bonus_earned": 10.0,
+  "score_pct": 100.0,
+  "levels": {
+    "L1": {
+      "name": "L1",
+      "title": "Inference",
+      "weight": 12.0,
+      "earned": 12.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 returns well-formed detections",
+        "\u2713 detections line up with ground truth (15/23 placed objects)",
+        "\u2713 detections.csv round-trips (19 rows)"
+      ],
+      "bonus": false
+    },
+    "L2": {
+      "name": "L2",
+      "title": "Boxes",
+      "weight": 18.0,
+      "earned": 18.0,
+      "status": "PASS",
+      "messages": [
+        "iou: \u2713 returns an array",
+        "iou: \u2713 shape (8,)",
+        "iou: \u2713 dtype float64",
+        "iou: \u2713 values match",
+        "filter boxes: \u2713 returns an array",
+        "filter boxes: \u2713 shape (17, 4)",
+        "filter boxes: \u2713 dtype float64",
+        "filter boxes: \u2713 values match",
+        "filter scores: \u2713 returns an array",
+        "filter scores: \u2713 shape (17,)",
+        "filter scores: \u2713 dtype float64",
+        "filter scores: \u2713 values match",
+        "filter labels: \u2713 returns an array",
+        "filter labels: \u2713 shape (1,)",
+        "filter labels: \u2713 dtype int64",
+        "filter labels: \u2713 values match"
+      ],
+      "bonus": false
+    },
+    "L3": {
+      "name": "L3",
+      "title": "Faces",
+      "weight": 14.0,
+      "earned": 14.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 the detector runs and returns boxes",
+        "\u2713 boxes land on the faces (40/40)",
+        "\u2713 counts agree with the manifest (40/40)"
+      ],
+      "bonus": false
+    },
+    "L4": {
+      "name": "L4",
+      "title": "The app",
+      "weight": 22.0,
+      "earned": 22.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 returns an image of the right shape and type",
+        "\u2713 input left untouched",
+        "\u2713 changes are concentrated on the faces (100% of altered pixels)",
+        "\u2713 report is complete and sane"
+      ],
+      "bonus": false
+    },
+    "L5": {
+      "name": "L5",
+      "title": "Who is it worse for",
+      "weight": 18.0,
+      "earned": 18.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 produced per-group rates (far, near)",
+        "\u2713 gap between groups is 0.93 (near 1.00, far 0.07), clearing the 0.20 floor",
+        "\u2713 identified 'far' as the worst-served group"
+      ],
+      "bonus": false
+    },
+    "REPO": {
+      "name": "REPO",
+      "title": "The repo",
+      "weight": 8.0,
+      "earned": 8.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 facedetect.app",
+        "\u2713 facedetect.audit",
+        "\u2713 facedetect.boxes",
+        "\u2713 facedetect.detect",
+        "\u2713 facedetect.faces"
+      ],
+      "bonus": false
+    },
+    "ART": {
+      "name": "ART",
+      "title": "The artifact",
+      "weight": 8.0,
+      "earned": 8.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 artifact.png exists (600, 800, 3)",
+        "\u2713 it is a real, altered image"
+      ],
+      "bonus": false
+    },
+    "BONUS": {
+      "name": "BONUS",
+      "title": "Suppression by hand",
+      "weight": 10.0,
+      "earned": 10.0,
+      "status": "PASS",
+      "messages": [
+        "\u2713 correct \u2014 968 boxes survive",
+        "\u2713 75.2x faster than the nested-loop version (needed 8x)"
+      ],
+      "bonus": true
+    }
+  },
+  "strict": false
+}
